@@ -81,11 +81,11 @@ void SklaserFactory::init()
         // flag=-1;
         if(flag==0)
         {
-            ROS_ERROR("[Senkeylaser] wrong modbus parameters");
+            ROS_ERROR("[Senkylaser] wrong modbus parameters");
         }
         else if(flag==-1)
         {
-            ROS_ERROR_STREAM("[Senkeylaser] Cannot connect modubs at port "<<sklaser.getPort());
+            ROS_ERROR_STREAM("[Senkylaser] Cannot connect modubs at port "<<sklaser.getPort());
         }
         else if(flag==1)
         {
@@ -111,7 +111,7 @@ void SklaserFactory::get_Device()
         int flag=this->sklaser.GetLaserDeviceAddress();
         if(flag==-1)
         {
-            ROS_ERROR("[Senkeylaser] Connected Error");           
+            ROS_ERROR("[Senkylaser] Connected Error");           
         }
         else
         {
@@ -173,12 +173,6 @@ int main(int argc,char **argv)
 {
 
     ros::init(argc,argv,"skpro30_laser");
-
-
-    // SenkyLaser sklaser(port,service_id);
-    string port="/dev/ttyUSB0";
-
-    int service_id=0x01;
 
     SklaserFactory sktest;   
 
