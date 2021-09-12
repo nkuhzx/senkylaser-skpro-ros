@@ -1,0 +1,7 @@
+<launch>
+    <node pkg="skpro30_laser" type="senkylaserfactory" name="laser_node" output="screen">
+        <param name="port" value="/dev/ttyUSB0"/>
+        <param name="service_id" value="1"/>
+    </node>
+
+</launch>
